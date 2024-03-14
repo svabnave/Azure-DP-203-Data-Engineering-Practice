@@ -1,0 +1,23 @@
+{
+    "now": "2021-06-24T23:32:01.559Z",
+    "perfNow": 10145614.100000001,
+    "diagnosticCorrelation": "65479c5a-8613-41d7-baa9-0467bd677a16",
+    "source": "DownloadSupportFiles",
+    "environment": {
+        "productName": "adf",
+        "buildVersion": "1.0.20210618.14",
+        "environmentType": 3,
+        "resourceName": "myadf20210624",
+        "resourceRegion": "norwayeast",
+        "resourceGroup": "learn-a314381a-c6c7-4377-8830-a101fd270c46",
+        "subscriptionId": "249f794e-6aa4-4f31-9199-32268085bbf4",
+        "sessionId": "zUk/n",
+        "operationId": "F1UDz",
+        "gitType": "live"
+    },
+    "additionalInfo": {
+        "selectedResource": "UpdateCustomerDimension",
+        "selectedResourceType": "dataflow",
+        "dataFlowSessionId": "b949f903-c7e1-492d-a802-f3bc8c4a30a0"
+    }
+}

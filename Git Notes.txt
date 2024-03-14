@@ -1,0 +1,24 @@
+Exercises from Azure Data Engineer Microsoft Learn Path:
+
+1. Manin Branch clonned ADF json code from ADF service
+2. Collab_branch is collaboration branch
+3. Working_brabch is working branch
+4. adf_publish branch is Publish branch
+
+
+Pull request pull changes in current branch to collab branch.
+- Created working_branch pipeline in working branch, created pulled request and merged branch. Changes automatically came in collab branch
+- Created collab_branch pipeline in collab branch, created pulled request. Nothing to pull.
+- Updated working_branch pipeline in working branch, created pulled request. No Change in collab branch but ready to merge pull request.
+- Merge Pull request. updated working_branch pipline is merged into collab branch. but collab branch updates were not sent back to working branch.
+- Updated working_branch pipeline in collab branch, then updated working_branch pipeline in working branch, created pulled request. Merge not possible as working branch have conflict with collab branch.
+- Updated collab_branch pipeline in collab branch, created pulled request. Select working branch to pull all changes from collab branch. Merged pull request. collab changes came in working branch
+- Updated collab_branch pipeline in collab branch, created pulled request. Select main branch to pull all changes from collab branch. NO OPTION TO MERGE with messege that main and collab_branch are entirely different commit histories.
+- updated working branch pipeline in working branch and created pull request. Select main branch to pull all changes from working branch. NO OPTION TO MERGE with messege that main and collab_branch are entirely different commit histories.
+- Publish changes from collab branch.
+
+Conclusion: 
+1. Here collab branch act as a main branch and not the default (main) branch.
+2. You can publish changes only from collab branch and neither from working branch or default (main) branch
+3. default (main) branch is useless if not selected as collab branch while configuring Github repo with ADF.
+4. Always clonn ADF json code to collab branch from ADF service.

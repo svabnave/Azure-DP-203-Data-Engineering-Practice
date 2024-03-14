@@ -1,0 +1,7 @@
+selected resource name:		UpdateCustomerDimension
+selected resource type:		dataflow
+factory name:			adf20210625
+factory location:		norwayeast
+subscription id:		249f794e-6aa4-4f31-9199-32268085bbf4
+data flow session id:		b949f903-c7e1-492d-a802-f3bc8c4a30a0
+time of download (UTC):		Thu, 24 Jun 2021 23:32:01 GMT

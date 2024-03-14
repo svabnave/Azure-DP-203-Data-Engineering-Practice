@@ -1,0 +1,17 @@
+https://github.com/djpmsft/ADF_Labs/tree/master/sample-data
+https://github.com/Azure/azure-sdk-for-net/tree/Azure.Storage.Blobs_12.7.0/sdk/storage/Azure.Storage.Blobs
+https://github.com/solliancenet/microsoft-learning-paths-databricks-notebooks/blob/master/data-engineering/DBC/03-Reading-and-writing-data-in-Azure-Databricks.dbc?raw=true
+https://github.com/solliancenet/microsoft-learning-paths-databricks-notebooks/tree/master/data-engineering/DBC/
+https://github.com/MicrosoftDocs/mslearn_databricks
+https://github.com/MicrosoftDocs/mslearn_databricks/blob/main/streaming/1.1.0/Labs.dbc?raw=true
+https://github.com/MicrosoftDocs/mslearn_databricks/blob/main/synapse/1.1.0/Labs.dbc?raw=true
+
+https://docs.microsoft.com/en-us/learn/modules/orchestrate-data-movement-transformation-azure-data-factory/5a-exercise-integrate-notebook-azure-synapse-pipelines/?ns-enrollment-type=LearningPath&ns-enrollment-id=learn.wwl.data-integration-scale-azure-data-factory
+
+pip install azure-mgmt-datafactory
+
+
+print((csvDF.count(), len(csvDF.columns)))
+
+
+

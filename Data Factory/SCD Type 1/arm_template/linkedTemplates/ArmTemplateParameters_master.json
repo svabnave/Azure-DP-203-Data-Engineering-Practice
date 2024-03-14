@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "adfvishal07022021195014"
+        },
+        "ADFDataFileShareLink_connectionString": {
+            "value": ""
+        },
+        "AzureSqlDatabase1_connectionString": {
+            "value": ""
+        },
+        "SSISIR_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+            "value": "sqlserver202124.database.windows.net"
+        },
+        "SSISIR_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+            "value": "Vishal"
+        },
+        "SSISIR_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+            "value": ""
+        },
+        "containerUri": {
+            "value": ""
+        },
+        "containerSasToken": {
+            "value": ""
+        }
+    }
+}

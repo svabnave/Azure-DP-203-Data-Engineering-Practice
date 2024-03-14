@@ -1,0 +1,20 @@
+{
+    "_id" : "F0FF0BA8-CEF4-454C-9173-FA7C546F7179",
+    "customerId" : "A852CB99-DAA1-4348-A86F-622D4478A7D0",
+    "orderDate" : "2013-07-11T00:00:00",
+    "shipDate" : "2013-07-18T00:00:00",
+    "details" : [
+        {
+            "sku" : "LJ-0192-M",
+            "name" : "Long-Sleeve Logo Jersey, M",
+            "price" : 49.99,
+            "quantity" : 1
+        },
+        {
+            "sku" : "SH-W890-M",
+            "name" : "Women's Mountain Shorts, M",
+            "price" : 69.99,
+            "quantity" : 1
+        }
+    ]
+}

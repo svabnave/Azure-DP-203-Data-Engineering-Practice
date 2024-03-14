@@ -1,0 +1,52 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "adfvishal08202021215730"
+        },
+        "version": {
+            "value": "V2"
+        },
+        "location": {
+            "value": "norwayeast"
+        },
+        "publicNetworkAccess": {
+            "value": true
+        },
+        "gitConfigureLater": {
+            "value": true
+        },
+        "tagsByResource": {
+            "value": {}
+        },
+        "userAssignedIdentitiesStr": {
+            "value": "{\"type\": \"SystemAssigned,UserAssigned\", \"userAssignedIdentities\": {\"\": {}}}"
+        },
+        "enableCMK": {
+            "value": false
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

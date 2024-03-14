@@ -1,0 +1,27 @@
+{
+    "name": "SSISIR",
+    "properties": {
+        "type": "Managed",
+        "typeProperties": {
+            "computeProperties": {
+                "location": "Norway East",
+                "nodeSize": "Standard_D8_v3",
+                "numberOfNodes": 2,
+                "maxParallelExecutionsPerNode": 8
+            },
+            "ssisProperties": {
+                "catalogInfo": {
+                    "catalogServerEndpoint": "sqlserver202124.database.windows.net",
+                    "catalogAdminUserName": "Vishal",
+                    "catalogAdminPassword": {
+                        "type": "SecureString",
+                        "value": "**********"
+                    },
+                    "catalogPricingTier": "S1"
+                },
+                "edition": "Standard",
+                "licenseType": "LicenseIncluded"
+            }
+        }
+    }
+}

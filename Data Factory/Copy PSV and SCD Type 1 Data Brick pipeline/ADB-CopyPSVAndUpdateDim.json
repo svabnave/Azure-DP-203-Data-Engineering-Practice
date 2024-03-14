@@ -1,0 +1,57 @@
+{
+    "name": "ADB-CopyPSVAndUpdateDim",
+    "properties": {
+        "activities": [
+            {
+                "name": "copyPSVtoSQL",
+                "type": "DatabricksNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "7.00:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/Users/vishal.abnave00002@gmail.com/CopyPSVtoSQL"
+                },
+                "linkedServiceName": {
+                    "referenceName": "AzureDatabricks",
+                    "type": "LinkedServiceReference"
+                }
+            },
+            {
+                "name": "UpdateCustomerDimension",
+                "type": "DatabricksNotebook",
+                "dependsOn": [
+                    {
+                        "activity": "copyPSVtoSQL",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "7.00:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/Users/vishal.abnave00002@gmail.com/UpdateCustomerDimension"
+                },
+                "linkedServiceName": {
+                    "referenceName": "AzureDatabricks",
+                    "type": "LinkedServiceReference"
+                }
+            }
+        ],
+        "annotations": [],
+        "lastPublishTime": "2021-08-21T06:39:41Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}

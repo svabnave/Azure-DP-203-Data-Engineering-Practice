@@ -1,0 +1,17 @@
+{
+    "name": "MyAzureRuntime",
+    "properties": {
+        "type": "Managed",
+        "typeProperties": {
+            "computeProperties": {
+                "location": "Norway East",
+                "dataFlowProperties": {
+                    "computeType": "General",
+                    "coreCount": 8,
+                    "timeToLive": 0,
+                    "cleanup": false
+                }
+            }
+        }
+    }
+}

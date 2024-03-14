@@ -1,0 +1,6 @@
+selected resource name:		copyPSVtoSQL
+selected resource type:		pipeline
+factory name:			adf20210625
+factory location:		norwayeast
+subscription id:		c9ea5d66-32e8-4044-8b67-e372329d2e33
+time of download (UTC):		Fri, 25 Jun 2021 18:47:19 GMT

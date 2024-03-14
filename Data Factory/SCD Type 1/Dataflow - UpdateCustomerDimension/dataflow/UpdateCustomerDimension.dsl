@@ -1,0 +1,87 @@
+source(output(
+		CustomerID as integer,
+		Title as string,
+		FirstName as string,
+		MiddleName as string,
+		LastName as string,
+		Suffix as string,
+		CompanyName as string,
+		SalesPerson as string,
+		EmailAddress as string,
+		Phone as string
+	),
+	allowSchemaDrift: true,
+	validateSchema: false,
+	isolationLevel: 'READ_UNCOMMITTED',
+	format: 'table') ~> SourceDB
+source(output(
+		CustomerID as integer,
+		Title as string,
+		FirstName as string,
+		MiddleName as string,
+		LastName as string,
+		Suffix as string,
+		CompanyName as string,
+		SalesPerson as string,
+		EmailAddress as string,
+		Phone as string,
+		InsertedDate as timestamp,
+		ModifiedDate as timestamp,
+		HashKey as string
+	),
+	allowSchemaDrift: true,
+	validateSchema: false,
+	isolationLevel: 'READ_UNCOMMITTED',
+	format: 'table') ~> DimCustomer
+SourceDB derive(HashKey = sha2(256, iifNull(Title,'') +FirstName +iifNull(MiddleName,'') +LastName +iifNull(Suffix,'') +iifNull(CompanyName,'') +iifNull(SalesPerson,'') +iifNull(EmailAddress,'') +iifNull(Phone,''))) ~> CreateCustomerHash
+CreateCustomerHash, DimCustomer exists(CreateCustomerHash@HashKey == DimCustomer@HashKey,
+	negate:true,
+	broadcast: 'auto')~> Exists
+Exists, DimCustomer lookup(SourceDB@CustomerID == DimCustomer@CustomerID,
+	multiple: false,
+	pickup: 'any',
+	broadcast: 'auto')~> LookupCustomerID
+LookupCustomerID derive(InsertedDate = iif(isNull(InsertedDate), currentTimestamp(), InsertedDate),
+		ModifiedDate = currentTimestamp()) ~> SetDates
+SetDates alterRow(upsertIf(true())) ~> AllowUpserts
+AllowUpserts sink(allowSchemaDrift: true,
+	validateSchema: false,
+	input(
+		CustomerID as integer,
+		Title as string,
+		FirstName as string,
+		MiddleName as string,
+		LastName as string,
+		Suffix as string,
+		CompanyName as string,
+		SalesPerson as string,
+		EmailAddress as string,
+		Phone as string,
+		InsertedDate as timestamp,
+		ModifiedDate as timestamp,
+		HashKey as string
+	),
+	deletable:false,
+	insertable:false,
+	updateable:false,
+	upsertable:true,
+	keys:['CustomerID'],
+	format: 'table',
+	skipDuplicateMapInputs: true,
+	skipDuplicateMapOutputs: true,
+	errorHandlingOption: 'stopOnFirstError',
+	mapColumn(
+		CustomerID = SourceDB@CustomerID,
+		Title = SourceDB@Title,
+		FirstName = SourceDB@FirstName,
+		MiddleName = SourceDB@MiddleName,
+		LastName = SourceDB@LastName,
+		Suffix = SourceDB@Suffix,
+		CompanyName = SourceDB@CompanyName,
+		SalesPerson = SourceDB@SalesPerson,
+		EmailAddress = SourceDB@EmailAddress,
+		Phone = SourceDB@Phone,
+		InsertedDate,
+		ModifiedDate,
+		HashKey = CreateCustomerHash@HashKey
+	)) ~> Sink

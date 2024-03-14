@@ -1,0 +1,22 @@
+{
+    "now": "2021-06-25T18:47:19.227Z",
+    "perfNow": 10965771.899999991,
+    "diagnosticCorrelation": "b33cb4d4-3e34-4452-a65b-dade5a5697df",
+    "source": "DownloadSupportFiles",
+    "environment": {
+        "productName": "adf",
+        "buildVersion": "1.0.20210618.14",
+        "environmentType": 3,
+        "resourceName": "adf20210625",
+        "resourceRegion": "norwayeast",
+        "resourceGroup": "learn-7b32d632-3425-4180-84e2-8dba68ce722d",
+        "subscriptionId": "c9ea5d66-32e8-4044-8b67-e372329d2e33",
+        "sessionId": "6+459",
+        "operationId": "Cokf7",
+        "gitType": "live"
+    },
+    "additionalInfo": {
+        "selectedResource": "copyPSVtoSQL",
+        "selectedResourceType": "pipeline"
+    }
+}

@@ -1,0 +1,101 @@
+[
+{
+    "visitorId": 9529082,
+    "topProductPurchases": [
+    {
+        "productId": 4679,
+        "itemsPurchasedLast12Months": 26
+    },
+    {
+        "productId": 1779,
+        "itemsPurchasedLast12Months": 32
+    },
+    {
+        "productId": 2125,
+        "itemsPurchasedLast12Months": 75
+    },
+    {
+        "productId": 2007,
+        "itemsPurchasedLast12Months": 39
+    },
+    {
+        "productId": 1240,
+        "itemsPurchasedLast12Months": 31
+    },
+    {
+        "productId": 446,
+        "itemsPurchasedLast12Months": 39
+    },
+    {
+        "productId": 3110,
+        "itemsPurchasedLast12Months": 40
+    },
+    {
+        "productId": 52,
+        "itemsPurchasedLast12Months": 2
+    },
+    {
+        "productId": 978,
+        "itemsPurchasedLast12Months": 81
+    },
+    {
+        "productId": 1219,
+        "itemsPurchasedLast12Months": 56
+    },
+    {
+        "productId": 2982,
+        "itemsPurchasedLast12Months": 59
+    }
+    ]
+},
+
+{
+    "visitorId": 1034848,
+    "topProductPurchases": [
+    {
+        "productId": 4679,
+        "itemsPurchasedLast12Months": 21
+    },
+    {
+        "productId": 1779,
+        "itemsPurchasedLast12Months": 30
+    },
+    {
+        "productId": 2125,
+        "itemsPurchasedLast12Months": 72
+    },
+    {
+        "productId": 2007,
+        "itemsPurchasedLast12Months": 39
+    },
+    {
+        "productId": 1240,
+        "itemsPurchasedLast12Months": 31
+    },
+    {
+        "productId": 446,
+        "itemsPurchasedLast12Months": 39
+    },
+    {
+        "productId": 3110,
+        "itemsPurchasedLast12Months": 45
+    },
+    {
+        "productId": 52,
+        "itemsPurchasedLast12Months": 5
+    },
+    {
+        "productId": 978,
+        "itemsPurchasedLast12Months": 81
+    },
+    {
+        "productId": 1219,
+        "itemsPurchasedLast12Months": 54
+    },
+    {
+        "productId": 2982,
+        "itemsPurchasedLast12Months": 63
+    }
+    ]
+}
+]
